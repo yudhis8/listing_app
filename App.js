@@ -5,15 +5,15 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {Provider} from 'react-redux';
 
-import {store} from './src/store/index';
-import {HomeScreen} from './src/navigator/index';
+import {store} from './src/store';
+import {Home} from './src/navigator';
 const Stack = createStackNavigator();
 const RootStack = createStackNavigator();
 
 function App() {
   return (
     <Stack.Navigator headerMode={'none'}>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
 }

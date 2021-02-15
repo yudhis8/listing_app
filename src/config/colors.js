@@ -1,9 +1,11 @@
 const colors = {
-  primary: '#000',
-  secondary: '#646464',
+  primary: '#F9F9F9',
   black: '#000000',
-  lightBlack: '#121212',
-  white: '#FFFFFF',
+  white: '#fff',
+  text: '#838383',
+  activeColor: '#BEAF87',
+  blue: '#5497F1',
+  green: '#71C392',
 };
 
 export default colors;

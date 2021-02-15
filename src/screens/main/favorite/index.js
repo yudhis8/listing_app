@@ -9,16 +9,14 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {Header} from '../../../component';
-import MyTabs from '../../../navigator/tab';
 import styles from './style';
 
-const App = () => {
+const Favorite = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <MyTabs />
     </View>
   );
 };
 
-export default App;
+export default Favorite;
