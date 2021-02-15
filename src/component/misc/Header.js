@@ -2,18 +2,23 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {hp, wp} from '../../helper';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-const Header = () => {
+import AntDesign from 'react-native-vector-icons/AntDesign';
+const Header = (props) => {
   return (
     <View style={styles.headerArea}>
       <View style={styles.left}>
         <MaterialIcons name="arrow-back" size={24} color="black" />
       </View>
-      <View style={styles.body}>
-        <Text>Header</Text>
-      </View>
-      <View style={styles.right}>
-        <Text>Header</Text>
-      </View>
+      {props.showMiddle && (
+        <>
+          <View style={styles.body}>
+            <Text>{props.title}</Text>
+          </View>
+          <View style={styles.right}>
+            <AntDesign name="hearto" size={24} color="black" />
+          </View>
+        </>
+      )}
     </View>
   );
 };

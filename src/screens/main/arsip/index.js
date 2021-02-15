@@ -7,13 +7,22 @@
  */
 
 import React from 'react';
-import {View, Text} from 'react-native';
-import {Header} from '../../../component';
+import {View, Text, ScrollView} from 'react-native';
+import {CardItem} from '../../../component';
+import {dummyDataArsip} from '../../../config/constants';
+
 import styles from './style';
-const Arsip = () => {
+
+const Arsip = (props) => {
   return (
     <View style={styles.container}>
-      <Header />
+      <ScrollView>
+        <View style={styles.itemArea}>
+          {dummyDataArsip.map((data, index) => {
+            return <CardItem key={index} data={data} />;
+          })}
+        </View>
+      </ScrollView>
     </View>
   );
 };

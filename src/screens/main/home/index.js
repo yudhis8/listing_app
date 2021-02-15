@@ -8,7 +8,7 @@
 
 import React from 'react';
 import {View, Text} from 'react-native';
-import {Header} from '../../../component';
+import {Header, ProfileArea} from '../../../component';
 import MyTabs from '../../../navigator/tab';
 import styles from './style';
 
@@ -16,6 +16,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
+      <ProfileArea />
       <MyTabs />
     </View>
   );

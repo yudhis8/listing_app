@@ -6,6 +6,7 @@ const colors = {
   activeColor: '#BEAF87',
   blue: '#5497F1',
   green: '#71C392',
+  whiteTransparent: 'rgba(255, 255, 255, 0.9)',
 };
 
 export default colors;
