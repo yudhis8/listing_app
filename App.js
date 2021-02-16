@@ -6,7 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Provider} from 'react-redux';
 
 import {store} from './src/store';
-import {Home, Detail} from './src/navigator';
+import {Home, Detail, ModalOption} from './src/navigator';
 const Stack = createStackNavigator();
 const RootStack = createStackNavigator();
 
@@ -20,6 +20,21 @@ function App() {
 }
 
 function RootStackScreen() {
+  const modalOptions = {
+    headerShown: false,
+    cardStyle: {backgroundColor: 'transparent'},
+    cardOverlayEnabled: true,
+    cardStyleInterpolator: ({current: {progress}}) => ({
+      overlayStyle: {
+        opacity: progress.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, 0.6],
+          extrapolate: 'clamp',
+        }),
+      },
+    }),
+  };
+
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -28,6 +43,11 @@ function RootStackScreen() {
             name="Main"
             component={App}
             options={{headerShown: false}}
+          />
+          <RootStack.Screen
+            name="ModalMenu"
+            options={modalOptions}
+            component={ModalOption}
           />
         </RootStack.Navigator>
       </NavigationContainer>

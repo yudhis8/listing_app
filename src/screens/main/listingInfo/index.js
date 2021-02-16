@@ -20,8 +20,8 @@ const ListingInfo = ({params}) => {
   return (
     <View style={styles.container}>
       <View style={styles.itemArea}>
-        {dummyListingInfo.map((data) => {
-          return <Item data={data} />;
+        {dummyListingInfo.map((data, index) => {
+          return <Item key={index} data={data} />;
         })}
       </View>
       <View style={styles.divider}></View>

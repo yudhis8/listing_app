@@ -11,6 +11,7 @@ export const POST_LOGIN_REQUEST: string = 'auth/POST_LOGIN_REQUEST';
 
 // IS NEW
 export const SET_IS_NEW: string = 'auth/SET_IS_NEW';
+export const SET_TOKEN: string = 'auth/SET_TOKEN';
 
 // Logout
 export const POST_LOGOUT_BEGIN: string = 'auth/POST_LOGOUT_BEGIN';

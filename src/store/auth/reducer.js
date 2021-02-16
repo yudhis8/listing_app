@@ -11,6 +11,7 @@ import {
   POST_LOGOUT_SUCCESS,
   POST_LOGOUT_FAILURE,
   SET_IS_NEW,
+  SET_TOKEN,
 } from './constant';
 
 const initialState = {
@@ -18,10 +19,17 @@ const initialState = {
   isLoggedIn: false,
   loading: false,
   error: null,
+  token: null,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case SET_TOKEN:
+      console.log('action', action);
+      return {
+        ...state,
+        token: action.payload.token,
+      };
     case POST_LOGIN_BEGIN:
       console.log('begin');
       return {

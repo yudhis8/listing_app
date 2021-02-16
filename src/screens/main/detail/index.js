@@ -14,10 +14,35 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import colors from '../../../config/colors';
 import TabDetail from '../../../navigator/tabDetail';
-const Detail = ({params}) => {
+import {useSelector} from 'react-redux';
+const Detail = (props) => {
+  const auth = useSelector((state) => state.auth);
+  const token = auth.token;
+  const sendNotif = async () => {
+    await fetch('https://fcm.googleapis.com/fcm/send', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization:
+          'Bearer AAAAtrdtfAU:APA91bHzxVzs_sRDAV9-OchZlDtMDYrFPU0Wi2g-iERwTJWJ9CcmBQOqLf3QnkxSrnaeXXk8ZOuN6TEXQpy6cAit7_h0wfOkbpwMAq7FpRA1vYHGCnKWeKDypCKHFDAdz3Lhitwd3bdg',
+      },
+      body: JSON.stringify({
+        to: token,
+        data: {
+          title: 'Promosikan Listing.',
+          body: 'Listing properti anda berhasil dibagikan!',
+        },
+      }),
+    });
+  };
   return (
     <View style={styles.container}>
-      <Header showMiddle={true} title={'Detail Listing #80889'} />
+      <Header
+        onBackPress={() => props.navigation.goBack()}
+        showMiddle={true}
+        title={'Detail Listing #80889'}
+      />
       <ScrollView>
         <ImageBackground style={styles.imageArea} source={images.detail}>
           <View style={styles.countArea}>
@@ -101,7 +126,7 @@ const Detail = ({params}) => {
         </View>
       </ScrollView>
       <View style={styles.flyArea}>
-        <TouchableOpacity style={styles.buttonFly}>
+        <TouchableOpacity onPress={() => sendNotif()} style={styles.buttonFly}>
           <FontAwesome name="share-square-o" size={20} color={colors.white} />
           <Text style={styles.textButton}>Promosikan</Text>
         </TouchableOpacity>
