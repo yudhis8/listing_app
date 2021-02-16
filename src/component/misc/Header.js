@@ -1,18 +1,19 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import {hp, wp} from '../../helper';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {fontSize, hp, wp} from '../../helper';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import fonts from '../../config/fonts';
 const Header = (props) => {
   return (
     <View style={styles.headerArea}>
-      <View style={styles.left}>
+      <TouchableOpacity onPress={props.onBackPress} style={styles.left}>
         <MaterialIcons name="arrow-back" size={24} color="black" />
-      </View>
+      </TouchableOpacity>
       {props.showMiddle && (
         <>
           <View style={styles.body}>
-            <Text>{props.title}</Text>
+            <Text style={styles.titleHeader}>{props.title}</Text>
           </View>
           <View style={styles.right}>
             <AntDesign name="hearto" size={24} color="black" />
@@ -43,6 +44,11 @@ const styles = StyleSheet.create({
     width: wp(15),
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  titleHeader: {
+    fontFamily: fonts.AVENIR_BOLD,
+    fontSize: fontSize(14),
+    marginTop: 5,
   },
 });
 

@@ -1,0 +1,162 @@
+import {StyleSheet} from 'react-native';
+import colors from '../../../config/colors';
+import fonts from '../../../config/fonts';
+import {fontSize, wp, hp} from '../../../helper';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.primary,
+  },
+  imageArea: {
+    width: wp(100),
+    height: hp(30),
+    resizeMode: 'stretch',
+  },
+  countArea: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    backgroundColor: '#00000080',
+    padding: 2,
+    borderRadius: 5,
+  },
+  textCount: {
+    fontFamily: fonts.AVENIR_BOLD,
+    color: colors.white,
+    fontSize: fontSize(14),
+  },
+  titleArea: {
+    backgroundColor: colors.white,
+    padding: 20,
+    shadowColor: '#0000000B',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 2,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    marginBottom: 20,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  place: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    fontSize: fontSize(16),
+    color: colors.black,
+    marginVertical: 5,
+    lineHeight: 19,
+  },
+  price: {
+    fontFamily: fonts.AVENIR_BOLD,
+    fontSize: fontSize(22),
+    color: colors.black,
+  },
+  type: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    fontSize: fontSize(14),
+    color: colors.black,
+  },
+  divider: {
+    borderBottomColor: '#F2F2F2',
+    borderBottomWidth: 1,
+    marginVertical: 10,
+  },
+  address: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    fontSize: fontSize(10),
+    color: colors.text,
+  },
+  image: {
+    width: wp(15),
+    height: wp(10),
+    resizeMode: 'stretch',
+  },
+  bodyArea: {
+    backgroundColor: colors.white,
+    shadowColor: '#0000000B',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 2,
+    marginBottom: 20,
+    flex: 1,
+  },
+  icon: {
+    width: 20,
+    height: 20,
+    resizeMode: 'stretch',
+    marginRight: 10,
+  },
+  bottomArea: {
+    backgroundColor: colors.white,
+    padding: 20,
+    shadowColor: '#0000000B',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 2,
+    marginBottom: 20,
+  },
+  textRegular: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    fontSize: fontSize(14),
+    color: colors.black,
+    fontWeight: 'bold',
+  },
+  warningText: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    color: colors.activeColor,
+    fontSize: fontSize(13),
+    marginVertical: 20,
+  },
+  button: {
+    width: '40%',
+    flexDirection: 'row',
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    borderColor: '#E0E0E0',
+    borderWidth: 1,
+  },
+  flyArea: {
+    position: 'absolute',
+    bottom: 0,
+    width: wp(100),
+    height: 70,
+    backgroundColor: colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonFly: {
+    alignItems: 'center',
+    width: '90%',
+    height: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.black,
+    borderRadius: 3,
+    flexDirection: 'row',
+  },
+  textButton: {
+    fontFamily: fonts.AVENIR_REGULAR,
+    color: colors.white,
+    fontWeight: 'bold',
+    fontSize: fontSize(14),
+    color: colors.white,
+    marginLeft: 10,
+  },
+});

@@ -179,8 +179,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   divider: {
-    borderBottomColor: colors.text,
-    borderBottomWidth: 0.3,
+    borderBottomColor: '#F2F2F2',
+    borderBottomWidth: 1,
     paddingBottom: 10,
   },
   descArea: {

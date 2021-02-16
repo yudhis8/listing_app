@@ -11,6 +11,13 @@ const images = {
   room: require('../assets/images/room.png'),
   luas: require('../assets/images/luas.png'),
   bathroom: require('../assets/images/bathroom.png'),
+  detail: require('../assets/images/detail.png'),
+  marker: require('../assets/images/marker.png'),
+  sertifikat: require('../assets/images/sertifikat.png'),
+  time: require('../assets/images/time.png'),
+  lock: require('../assets/images/lock.png'),
+  call: require('../assets/images/call.png'),
+  wa: require('../assets/images/wa.png'),
 };
 
 export default images;

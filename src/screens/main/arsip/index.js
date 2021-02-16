@@ -19,7 +19,14 @@ const Arsip = (props) => {
       <ScrollView>
         <View style={styles.itemArea}>
           {dummyDataArsip.map((data, index) => {
-            return <CardItem key={index} data={data} />;
+            return (
+              <CardItem
+                onPress={() => props.navigation.navigate('Detail')}
+                onPressMenu={() => props.navigation.navigate('ModalMenu')}
+                key={index}
+                data={data}
+              />
+            );
           })}
         </View>
       </ScrollView>

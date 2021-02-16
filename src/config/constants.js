@@ -119,3 +119,72 @@ export const dummyDataArsip = [
     area: '118m',
   },
 ];
+
+export const dummyListingInfo = [
+  {
+    name: 'Kamar Tidur',
+    value: '3+1',
+    image: images.room,
+    satuan: null,
+  },
+  {
+    name: 'Kamar Mandi',
+    value: '3+1',
+    image: images.bathroom,
+    satuan: null,
+  },
+  {
+    name: 'Luas Bangunan',
+    value: '250',
+    image: images.luas,
+    satuan: 'M2',
+  },
+  {
+    name: 'Luas Tanah',
+    value: '300',
+    image: images.luas,
+    satuan: 'M2',
+  },
+  {
+    name: '(P X L) Bangunan',
+    value: '25 x 10',
+    image: images.luas,
+    satuan: 'M',
+  },
+  {
+    name: '(P X L) Bangunan',
+    value: '30 x 10',
+    image: images.luas,
+    satuan: 'M',
+  },
+  {
+    name: 'Jumlah Lantai',
+    value: '2',
+    image: images.bathroom,
+    satuan: null,
+  },
+  {
+    name: 'Listrik',
+    value: '3000',
+    image: images.luas,
+    satuan: 'W',
+  },
+  {
+    name: 'Kapasitas Garasi',
+    value: '2',
+    image: images.bathroom,
+    satuan: null,
+  },
+  {
+    name: 'Kapasitas Parkir',
+    value: '2',
+    image: images.bathroom,
+    satuan: null,
+  },
+  {
+    name: 'Line Telepon',
+    value: '2',
+    image: images.bathroom,
+    satuan: null,
+  },
+];
